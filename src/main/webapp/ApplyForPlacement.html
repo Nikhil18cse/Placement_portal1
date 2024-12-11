@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Apply for Placement</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="Dashboard.css" rel="stylesheet">
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch("/Palcement-Management_System/placement?action=placements")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Failed to fetch data");
+                }
+                return response.text();
+            })
+            .then(html => {
+                const tableBody = document.getElementById("placementsTableBody");
+                tableBody.innerHTML = html;
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                alert("Failed to load placement data. Please try again later.");
+            });
+    });
+
+    function apply() {
+        alert("Application submitted successfully!");
+    }
+
+    function reject() {
+        alert("Application rejected.");
+    }
+</script>
+
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="header">
+        <div style="padding-left:420px;">
+            <div class="title">
+                <h1>Apply for Placement</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subheader Section -->
+    <div class="place">
+        Placement Management Cell
+    </div>
+    <div class="tit">
+        <h3>Available Placements</h3>
+    </div>
+
+    <!-- Table Section -->
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>College</th>
+                    <th>Date</th>
+                    <th>Qualification</th>
+                    <th>Year</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="placementsTableBody">
+                <!-- Placement rows will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Back to Dashboard Button -->
+    <div class="log" style="padding-left: 530px;">
+        <div class="logout">
+            <a href="UserDashboard.html">
+                <button class="out">Back to Dashboard</button>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

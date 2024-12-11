@@ -1,0 +1,658 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.header {
+	height: 90px;
+	width: 100%;
+	background-color: rgba(16, 128, 234, 0.7);
+	display: flex;
+	justify-content: center;
+	position: fixed;
+}
+
+.container {
+	width: 100%;
+	background-color: rgba(16, 128, 234, 0.7);
+	display: flex;
+}
+
+.header_conatiner {
+	justify-content: space-between;
+}
+
+.logo {
+	height: 80px;
+	width: 20%;
+	font-size: 40px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	font-weight: bold;
+	color: white;
+	line-height: 80px;
+}
+
+.nav {
+	height: 80px;
+	width: 40%;
+	/* background-color: green; */
+	display: flex;
+}
+
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+
+.nav-area li {
+	display: inline-block;
+}
+
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+
+.nav-item:hover {
+	background-color: white;
+	color: rgba(16, 128, 234, 1);
+}
+
+.mySlides {
+	display: none
+}
+
+img {
+	vertical-align: middle;
+}
+
+
+/* Slideshow container */
+
+.slideshow-container {
+	/* max-width: 1000px; */
+	position: relative;
+	margin: auto;
+}
+
+
+/* Next & previous buttons */
+
+.prev,
+.next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -22px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+
+/* On hover, add a black background color with a little bit see-through */
+
+.prev:hover,
+.next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* Caption text */
+
+.text {
+	color: #f2f2f2;
+	font-size: 15px;
+	padding: 8px 12px;
+	position: absolute;
+	bottom: 8px;
+	width: 100%;
+	text-align: center;
+}
+
+.active,
+.dot:hover {
+	background-color: #717171;
+}
+
+
+/* Fading animation */
+
+.fade {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 2.5s;
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: .4
+	}
+
+	to {
+		opacity: 1
+	}
+}
+
+@media only screen and (max-width: 300px) {
+
+	.prev,
+	.next,
+	.text {
+		font-size: 11px
+	}
+}
+
+
+/* css for about */
+
+.about {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 100%;
+	/* background-color: gray; */
+	display: flex;
+	color: white;
+	flex-direction: column;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	align-items: center;
+	background-image: linear-gradient(rgb(10, 86, 156), rgb(91, 122, 189));
+}
+
+.about_container {
+	margin-top: 30px;
+	line-height: 30px;
+	display: inline;
+	/* background-color: red; */
+}
+
+.start_text {
+	font-size: 40px;
+	font-weight: bold;
+	color: white;
+}
+
+
+/* css for highlight */
+
+.highlight {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	width: 100%;
+	background-image: linear-gradient(rgb(91, 122, 189), rgb(10, 86, 156));
+	/* background-color: rgba(148, 198, 236, 0.7); */
+	display: flex;
+	justify-content: center;
+}
+
+.high_title {
+	font-size: 50px;
+}
+
+.high_desc {
+	font-size: 20px;
+}
+
+.high_ele {
+	width: 22%;
+	height: 200px;
+	background-color: rgba(11, 12, 104, 0.4);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+	color: white;
+	cursor: pointer;
+}
+
+.high_ele:hover {
+	background-color: white;
+	color: rgba(16, 128, 234, 0.7);
+	transition: .5s;
+}
+
+.hightlight_container {
+	justify-content: space-between;
+}
+
+
+/* css for portfolio */
+
+.portfolio {
+	/* padding-top: 50px;
+    padding-bottom: 50px; */
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(16, 128, 234, 0.7);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.portfolio_container {
+	flex-wrap: wrap;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.project {
+	width: 25%;
+	height: 330px;
+	background-color: red;
+	display: flex;
+	overflow: hidden;
+}
+
+.project_1 {
+	background-image: url("images/tech.jpg");
+	background-size: cover;
+}
+
+.project_2 {
+	background-image: url("images/capgemin.jpeg");
+	background-size: cover;
+	align-items: flex-end;
+}
+
+.project_3 {
+	background-image: url("images/tc1.jpg");
+	background-size: cover;
+}
+
+.project_4 {
+	background-image: url("images/infosys.jpeg");
+	background-size: cover;
+	align-items: flex-end;
+}
+
+.project_5 {
+	background-image: url("images/aws.jpg");
+	background-size: cover;
+}
+
+.project_6 {
+	background-image: url("images/wipro.jpeg");
+	background-size: cover;
+	align-items: flex-end;
+}
+
+.project_7 {
+	background-image: url("images/Legato.jpeg");
+	background-size: cover;
+}
+
+.project_8 {
+	background-image: url("images/Jio.jpeg");
+	background-size: cover;
+	align-items: flex-end;
+}
+
+.project_title {
+	padding-top: 0px;
+	padding-bottom: 40px;
+	color: white;
+	width: 100%;
+	height: 150px;
+	text-indent: 30px;
+	line-height: 200px;
+	background-color: rgba(16, 128, 234, 0.5);
+	align-items: center;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.project_title:hover {
+	height: 360px;
+	overflow: hidden;
+}
+
+
+/* css for footer */
+
+.footer {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: rgba(16, 128, 234, 1);
+	/* background-color: rgb(53, 50, 50); */
+	display: flex;
+	justify-content: center;
+}
+
+.footer_child {
+	height: 300px;
+	width: 25%;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer_child_1 {
+	color: white;
+	font-size: 20px;
+}
+
+ul {
+	margin-top: 40px;
+}
+
+li {
+	list-style-type: none;
+	margin-bottom: 10px;
+	color: white;
+}
+
+.first {
+	font: 22px;
+}
+
+.footer_child_4 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social_container {
+	width: 70%;
+	justify-content: space-between;
+	display: flex;
+}
+
+.social_items {
+	height: 40px;
+	width: 40px;
+	/* background-color: white; */
+	background-size: cover;
+}
+
+.si1 {
+	background-image: url("images/facebook.png");
+	background-size: cover;
+	cursor: pointer;
+}
+
+.si2 {
+	background-image: url("images/google.png");
+	background-size: cover;
+	cursor: pointer;
+}
+
+.si3 {
+	background-image: url("images/instagram.png");
+	background-size: cover;
+	cursor: pointer;
+}
+
+.si4 {
+	background-image: url("images/linkedin.png");
+	background-size: cover;
+	cursor: pointer;
+}
+
+
+/* services of SOE */
+
+.SOE_container {
+	width: 100%;
+	height: 500px;
+	padding-top: 5px;
+	background-color: gray;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.soe_padd {
+	padding-left: 50px;
+}
+
+.soe_container {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	padding-left: 240px;
+	background-color: rgba(133, 249, 255, 0.7);
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	justify-content: center;
+}
+
+.soe_title {
+	background-color: rgba(133, 249, 255, 0.7);
+	text-align: center;
+	display: flex;
+	height: 50%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 36%;
+}
+
+
+/* Login CSS */
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Poppins:400,500&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+}
+
+.bg-img {
+	background: url("images/bg.jpg");
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.bg-img:after {
+	position: absolute;
+	content: '';
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0, 0, 0, 0.7);
+}
+
+.content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 999;
+	text-align: center;
+	padding: 60px 32px;
+	width: 370px;
+	transform: translate(-50%, -50%);
+	background: rgb(109, 109, 226);
+	box-shadow: -1px 4px 28px 0px rgba(0, 0, 0, 0.75);
+}
+
+.content header {
+	color: white;
+	font-size: 33px;
+	font-weight: 600;
+	margin: 0 0 35px 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.field {
+	position: relative;
+	height: 45px;
+	width: 100%;
+	display: flex;
+	background: rgba(255, 255, 255, 0.94);
+}
+
+.field span {
+	color: #222;
+	width: 40px;
+	line-height: 45px;
+}
+
+.field input {
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: #222;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.space {
+	margin-top: 16px;
+}
+
+.show {
+	position: absolute;
+	right: 13px;
+	font-size: 13px;
+	font-weight: 700;
+	color: #222;
+	display: none;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.pass-key:valid~.show {
+	display: block;
+}
+
+.pass {
+	text-align: left;
+	margin: 10px 0;
+}
+
+.pass a {
+	color: white;
+	text-decoration: none;
+	font-family: 'Poppins', sans-serif;
+}
+
+.pass:hover a {
+	text-decoration: underline;
+}
+
+.field input[type="submit"] {
+	background: #3498db;
+	border: 1px solid #2691d9;
+	color: white;
+	font-size: 18px;
+	letter-spacing: 1px;
+	font-weight: 600;
+	cursor: pointer;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.field input[type="submit"]:hover {
+	background: blue;
+}
+
+.login {
+	color: white;
+	margin: 20px 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.links {
+	display: flex;
+	cursor: pointer;
+	color: white;
+	margin: 0 0 20px 0;
+}
+
+.facebook,
+.instagram {
+	width: 100%;
+	height: 45px;
+	line-height: 45px;
+	margin-left: 10px;
+}
+
+.facebook {
+	margin-left: 0;
+	background: #4267B2;
+	border: 1px solid #3e61a8;
+}
+
+.instagram {
+	background: #E1306C;
+	border: 1px solid #df2060;
+}
+
+.facebook:hover {
+	background: #3e61a8;
+}
+
+.instagram:hover {
+	background: #df2060;
+}
+
+.links i {
+	font-size: 17px;
+}
+
+i span {
+	margin-left: 8px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	font-size: 16px;
+	font-family: 'Poppins', sans-serif;
+}
+
+.signup {
+	font-size: 15px;
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+.signup a {
+	color: #3498db;
+	text-decoration: none;
+}
+
+.signup a:hover {
+	text-decoration: underline;
+}
+
+
+/* Dashboard*/
